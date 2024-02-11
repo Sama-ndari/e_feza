@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>eFeza</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body class="is-loading">
+			<div id="wrapper">
+                <section id="main">
+                    <header>
+                        <img src="static/images/logo.png" alt="" width="400px"/>
+                        <h1>Umuhora wagutse</h1>
+                    </header>
+                    <hr />
+                    <form method="POST" action="/generate_badge" enctype="multipart/form-data">
+                        <div class="field">
+                            <input type="text" name="nom" id="nom" placeholder="Nom" required/>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="prenom" id="prenom" placeholder="Prenom" required/>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="code" id="code" placeholder="Code Agent" required/>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="numero" id="numero" placeholder="Numero de Telephone"
+                                   pattern="\+257\[0-9]{8}" required/>
+                        </div>
+                        <div class="field">
+                            <input type="file" name="photo" id="photo" placeholder="Choose File" required/>
+                        </div>
+                        <input type="submit" value="Générer le badge">
+
+                    </form>
+                </section>
+
+            <!-- Footer -->
+                <footer id="footer">
+                    <span>&copy; eFeza</span>
+                </footer>
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
