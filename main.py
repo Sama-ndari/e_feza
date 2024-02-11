@@ -65,4 +65,5 @@ def generate_badge(nom, prenom, code_agent, numero_telephone, photo_path):
 
 
 if __name__ == "__main__":
-    app.run(port=8080, debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
