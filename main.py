@@ -20,7 +20,8 @@ def generate():
     photo = request.files["photo"]
 
     # Enregistrer la photo du user sur le serveur
-    photo_path = os.path.join("static", "uploads", photo.filename)
+    # photo_path = os.path.join("static", "uploads", photo.filename)
+    photo_path = f"static/uploads/{photo.filename}"
     photo.save(photo_path)
 
     # Générer la badge
