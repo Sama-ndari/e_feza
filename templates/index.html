@@ -5,13 +5,14 @@
 		<title>eFeza</title>
 		<meta charset="utf-8" />
         <link rel="icon" href="static/images/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="static/css/main.css" />
 	</head>
 	<body class="is-loading">
 			<div id="wrapper">
                 <section id="main">
                     <header>
-                        <img src="static/images/logo.png" alt="" width="400px"/>
+                        <img src="static/images/logo.png" alt="" width="85%"/>
                         <h1>Umuhora wagutse</h1>
                     </header>
                     <hr />
@@ -30,16 +31,24 @@
                                    pattern="\+257\[0-9]{8}" required/>
                         </div>
                         <div class="field">
-                            <input type="file" name="photo" id="photo" placeholder="Choose File" required/>
+                            <input type="file" name="photo" id="photo" placeholder="Ajouter Photo" required/>
+                        </div>
+                        <div class="field">
+                            <label for="image">Photo</label>
+                            <input type="radio" name="format" id="image" value="photo" checked>
+                            <label for="pdf">PDF</label>
+                            <input type="radio" name="format" id="pdf" value="pdf">
                         </div>
                         <input type="submit" value="Générer le badge">
-
                     </form>
+                    <hr />
                 </section>
 
             <!-- Footer -->
                 <footer id="footer">
-                    <span>&copy; eFeza</span>
+                    <ul class="copyright">
+                        <li>&copy; eFeza</li>
+                    </ul>
                 </footer>
 			</div>
 
