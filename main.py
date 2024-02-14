@@ -69,7 +69,7 @@ def generate_badge(nom, prenom, code_agent, numero_telephone, photo_path, format
         return pdf_path
     else:
         # Charger le modèle de badge, l image donc
-        badge = Image.open("static/images/badge_template1.png")
+        badge = Image.open("static/images/badge_template.png")
         draw = ImageDraw.Draw(badge)
 
         font_petit = ImageFont.truetype("arial.ttf", size=20)
