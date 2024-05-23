@@ -52,7 +52,7 @@ def generate_badge(nom, prenom, code_agent, numero_telephone, photo_path, format
         c.save()
         return pdf_path
     else:
-        # on cree la badge
+        # on cree la badge sous forme d image
         badge = generate_badge_image(nom, prenom, code_agent, numero_telephone, photo_path)
         return badge
 
